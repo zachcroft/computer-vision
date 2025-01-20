@@ -14,7 +14,7 @@ import numpy as np
 from skimage import data, filters
 
 # Open the video
-cap = cv2.VideoCapture("../videos/people_walking.mp4")
+cap = cv2.VideoCapture("../videos/traffic3.mp4")
 
 # === Temporal median filter to get Background === 
 
