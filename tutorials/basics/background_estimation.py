@@ -14,12 +14,12 @@ import numpy as np
 from skimage import data, filters
 
 # Open the video
-cap = cv2.VideoCapture("../videos/dog.mp4")
+cap = cv2.VideoCapture("../videos/people_walking.mp4")
 
 # === Temporal median filter to get Background === 
 
 # Randomly select some frames
-num_frames = 25
+num_frames = 50
 frameIds   = (cap.get(cv2.CAP_PROP_FRAME_COUNT) * 
               np.random.uniform(size=num_frames))
 
@@ -50,6 +50,8 @@ ret = True
 while (ret):
     # Read the frame
     ret, frame = cap.read()
+    if not ret:
+        break
 
     # Convert the frame to grayscale
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
