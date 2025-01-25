@@ -16,7 +16,7 @@ while ret:
     # Capture a frame
     ret, frame = webcam.read()
 
-    # Display the frame every 100 msec
+    # Display the frame
     cv2.imshow("Webcam capture", frame)
     cv2.waitKey(period)
 
